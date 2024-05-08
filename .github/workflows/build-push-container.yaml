@@ -5,7 +5,8 @@ on:
 env:
   GITHUB_SHA: ${{ github.sha }}
   REGISTRY_URL: us.icr.io
-  IMAGE_NAME: dts-ce-cat-app
+  IMAGE_NAME: dts-ce-py-app
+  REGISTRY_NAMESPACE: rtiffany
 
 jobs:
   build-push-update:
@@ -22,7 +23,7 @@ jobs:
       id: build-image
       uses: redhat-actions/buildah-build@v2
       with:
-        image: ${{ secrets.REGISTRY_NAMESPACE }}/${{ env.IMAGE_NAME }}
+        image: ${{ env.REGISTRY_NAMESPACE }}/${{ env.IMAGE_NAME }}
         tags: latest ${{ github.sha }}
         containerfiles: |
           ./Dockerfile
