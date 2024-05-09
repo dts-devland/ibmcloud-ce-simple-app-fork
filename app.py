@@ -1,5 +1,6 @@
 """simple flask app to return host info"""
 import socket
+from datetime import datetime 
 from flask import Flask
 
 """
@@ -20,7 +21,8 @@ def get_host_info():
 def hello():
     """display system info"""
     hostname, ip = get_host_info()
-    return f"Hello, World<br>Hostname: {hostname}<br>IP Address: {ip}"
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return f"Hello, World<br>Hostname: {hostname}<br>IP Address: {ip}<br>Current Time: {current_time}"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
