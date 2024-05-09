@@ -2,6 +2,9 @@
 import socket
 from flask import Flask
 
+"""
+declare flask app
+"""
 app = Flask(__name__)
 
 def get_host_info():
@@ -12,6 +15,7 @@ def get_host_info():
     ip_address = socket.gethostbyname(hostname)
     return hostname, ip_address
 
+"""declare route for app"""
 @app.route('/')
 def hello():
     """display system info"""
