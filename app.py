@@ -1,3 +1,4 @@
+"""simple flask app to return host info"""
 import socket
 from flask import Flask
 
