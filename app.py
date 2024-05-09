@@ -13,6 +13,7 @@ def get_host_info():
 
 @app.route('/')
 def hello():
+    """display system info"""
     hostname, ip = get_host_info()
     return f"Hello, World<br>Hostname: {hostname}<br>IP Address: {ip}"
 
