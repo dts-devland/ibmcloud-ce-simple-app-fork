@@ -4,6 +4,9 @@ from flask import Flask
 app = Flask(__name__)
 
 def get_host_info():
+    """
+    get hostname and ip info
+    """
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
     return hostname, ip_address
