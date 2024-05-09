@@ -2,10 +2,14 @@ FROM python:3.12-slim
 
 WORKDIR /usr/src/app
 
+# copy over requirements file
 COPY requirements.txt ./
+
+# Install python dependencies
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
+# copy main python script
 COPY app.py ./app.py
 
 # Copy the entrypoint script and make it executable
