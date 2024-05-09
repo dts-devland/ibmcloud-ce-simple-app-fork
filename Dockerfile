@@ -1,5 +1,7 @@
+# set base layer
 FROM python:3.12-slim
 
+# set working dir in container
 WORKDIR /usr/src/app
 
 # copy over requirements file
