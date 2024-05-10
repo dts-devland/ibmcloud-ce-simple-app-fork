@@ -1,4 +1,8 @@
-"""simple flask app to return host info"""
+"""
+simple flask app to return host info
+used as a testing point for code engine webhook function 
+"""
+
 import socket
 from datetime import datetime 
 from flask import Flask
