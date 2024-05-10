@@ -24,6 +24,7 @@ def hello():
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     return f"Hello, World<br>Hostname: {hostname}<br>IP Address: {ip}<br>Current Time: {current_time}"
 
+"""invoke script"""
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
 
