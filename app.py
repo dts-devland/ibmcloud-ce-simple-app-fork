@@ -38,7 +38,7 @@ def hello():
     """display system info"""
     hostname, ip = get_host_info()
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    return f"Hello, World from a simple app<br>System {hostname} is reporting the current time as: {current_time}<br>IP Address: {ip}<br>"
+    return f"Hello, World from a simple app<br>Hostname {hostname} is reporting the current time as: {current_time}<br>Current IP Address: {ip}<br>"
 
 """invoke script"""
 if __name__ == "__main__":
