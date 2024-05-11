@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Author: Ryan Tiffany
 # Copyright (c) 2024
 #
