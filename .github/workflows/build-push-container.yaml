@@ -19,15 +19,15 @@ jobs:
     - name: Clone the repository
       uses: actions/checkout@v2
 
-    - name: Set short SHA
-      run: echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
+    # - name: Set short SHA
+    #   run: echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
 
     - name: Buildah Action
       id: build-image
       uses: redhat-actions/buildah-build@v2
       with:
         image: ${{ env.REGISTRY_NAMESPACE }}/${{ env.IMAGE_NAME }}
-        tags: latest ${{ env.SHORT_SHA }}
+        tags: latest ${{ env.GITHUB_SHA }}
         containerfiles: |
           ./Dockerfile
 
