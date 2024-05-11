@@ -14,6 +14,8 @@ RUN pip install --upgrade pip && \
 # copy main python script
 COPY app.py ./app.py
 
+COPY templates ./templates
+
 # Copy the entrypoint script and make it executable
 RUN chmod +x app.py
 
