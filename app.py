@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # Author: Ryan Tiffany
 # Copyright (c) 2024
 #
