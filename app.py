@@ -31,7 +31,7 @@ Bootstrap(app)
 def home():
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
-    message = "Welcome to the demo app!"
+    message = "Welcome to the demo app! Click a tile if you want to see more information."
     return render_template('index.html', hostname=hostname, ip=ip_address, message=message)
 
 """invoke script"""
