@@ -31,8 +31,8 @@ Bootstrap(app)
 def home():
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
-    randomness = "I am a random tile."
-    message = "Welcome to the demo app! Click a tile, you know you want to."
+    randomness = "I was automatically updated via github webhook."
+    message = "Welcome to the demo app!."
     return render_template('index.html', hostname=hostname, ip=ip_address, message=message, randomness=randomness)
 
 """invoke script"""
