@@ -33,7 +33,7 @@ def home():
     ip_address = socket.gethostbyname(hostname)
     randomness = "I am a random tile. Yes I am"
     message = "Welcome to the demo app! Click a tile, you know you want to."
-    return render_template('index.html', hostname=hostname, ip=ip_address, message=message)
+    return render_template('index.html', hostname=hostname, ip=ip_address, message=message, randomness=randomness)
 
 """invoke script"""
 if __name__ == "__main__":
