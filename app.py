@@ -34,7 +34,7 @@ def home():
     randomness = "I was automatically updated via github webhook."
     message = "Welcome to the demo app!."
     items = [
-        {'title': 'Site Message', 'content': message },
+        {'title': 'Container Message', 'content': message },
         {'title': 'Random tile', 'content': randomness },
         {'title': 'Container IP Address', 'content': ip_address },
         {'title': 'Container Hostname', 'content': hostname }
