@@ -36,8 +36,8 @@ def home():
     items = [
         {'title': 'Site Message', 'content': message },
         {'title': 'Random tile', 'content': randomness },
-        {'title': 'App IP Address', 'content': ip_address },
-        {'title': 'Compute Hostname', 'content': hostname }
+        {'title': 'Container IP Address', 'content': ip_address },
+        {'title': 'Container Hostname', 'content': hostname }
     ]
     return render_template('index.html', items=items)
 """invoke script"""
