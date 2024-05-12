@@ -31,6 +31,7 @@ Bootstrap(app)
 def home():
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
+    randomness = "I am a random tile"
     message = "Welcome to the demo app! Click a tile if you want to see something that does not work."
     return render_template('index.html', hostname=hostname, ip=ip_address, message=message)
 
