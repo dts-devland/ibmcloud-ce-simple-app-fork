@@ -33,8 +33,13 @@ def home():
     ip_address = socket.gethostbyname(hostname)
     randomness = "I was automatically updated via github webhook."
     message = "Welcome to the demo app!."
-    return render_template('index.html', hostname=hostname, ip=ip_address, message=message, randomness=randomness)
-
+    items = [
+        {'title': 'Site Message', 'content': message },
+        {'title': 'Random tile', 'content': randomness },
+        {'title': 'App IP Address', 'content': ip_address },
+        {'title': 'Compute Hostname', 'content': hostname }
+    ]
+    return render_template('index.html', items=items)
 """invoke script"""
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)
