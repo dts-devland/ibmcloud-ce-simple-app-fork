@@ -15,6 +15,7 @@
 
 __author__ = 'ryantiffany'
 
+import os
 import socket
 from datetime import datetime 
 from flask import Flask, render_template
@@ -29,13 +30,13 @@ Bootstrap(app)
 """declare route for app"""
 @app.route('/')
 def home():
+    app_version = os.getenv('K_REVISION')
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
-    randomness = "I was automatically updated via github webhook."
     message = "Welcome to the demo app!."
     items = [
+        {'title': 'App Revision', 'content': app_version },
         {'title': 'Container Message', 'content': message },
-        {'title': 'Random tile', 'content': randomness },
         {'title': 'Container IP Address', 'content': ip_address },
         {'title': 'Container Hostname', 'content': hostname }
     ]
